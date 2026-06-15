@@ -36,16 +36,17 @@ Add the following to your `claude_desktop_config.json`:
   "mcpServers": {
     "hevy": {
       "command": "python",
-      "args": ["C:/Users/ejave/hevy-mcp/main.py"],
-      "env": {
-        "HEVY_API_KEY": "your_api_key_here"
-      }
+      "args": ["/absolute/path/to/hevy-mcp/main.py"]
     }
   }
 }
 ```
 
-> **Note:** You can either set `HEVY_API_KEY` in the `env` block above **or** rely on the `.env` file — both work. The `env` block takes precedence.
+Replace `/absolute/path/to/hevy-mcp/main.py` with the actual path on your machine, e.g.:
+- **Windows:** `C:/Users/yourname/hevy-mcp/main.py`
+- **Mac:** `/Users/yourname/hevy-mcp/main.py`
+
+> **Note:** If `python` isn't recognized, use the full path to your Python executable (e.g. `C:/Users/yourname/AppData/Local/Python/bin/python.exe` on Windows).
 
 Restart Claude Desktop after saving the config.
 
